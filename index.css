@@ -1,0 +1,526 @@
+@tailwind base;
+@layer base {
+  /* Ensure all input fields have more padding and white background with black text */
+  input {
+    @apply bg-white text-black p-6 rounded-aurora focus:bg-gray-100 transition-colors;
+  }
+  /* Style for star buttons: remove padding/margins and transparent background */
+  .star-btn {
+    @apply p-0 m-0 bg-transparent border-0 shadow-none;
+  }
+}
+@tailwind components;
+@tailwind utilities;
+
+/* Ensure proper body styling */
+html, body {
+  font-family: 'Jost', sans-serif !important;
+  color: white;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  line-height: 1.6;
+}
+
+/* Mobile-specific adjustments */
+@media (max-width: 768px) {
+  html, body {
+    padding: 20px;
+  }
+
+  h1 {
+    font-size: 2.5rem !important;
+    line-height: 1.2;font-weight:300 !important;
+  }
+
+  h2 {
+    font-size: 2rem;
+    font-weight:300 !important;
+  }
+
+  h3 {
+    font-size: 1.5rem;font-weight:100 !important;
+  }
+
+  .aurora-border {
+    margin: 10px;
+    
+  }
+
+  nav .max-w-7xl {
+    padding: 0 10px;
+  }
+
+  /* Stack buttons vertically on mobile */
+  .flex.flex-col.sm\\:flex-row {
+    flex-direction: column;
+  }
+
+  /* Reduce padding on feature cards */
+  .aurora-border.p-8 {
+    padding: 1.5rem;
+  }
+}
+
+body::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: linear-gradient(135deg, #000000, #222222);
+}
+body.div{margin:20px;opacity:0.7;}
+/* Define explicit border-radius */
+.rounded-aurora {
+  border-radius: 33px;
+  opacity: 0.7;
+}
+
+/* Create a strong aurora border effect */
+.aurora-border {
+  position: relative;
+  box-shadow: 0 0 30px rgba(139, 92, 246, 0.3);
+}
+
+.aurora-border::before {
+  content: '';
+  position: absolute;
+  top: -4px;
+  right: -2px;
+  bottom: -4px;
+  left: -2px;
+  background: linear-gradient(135deg, #8b5cf6, #3CAAFF, #4ade80);
+  background-size: 300% 300%;
+  animation: aurora-flow 12s infinite linear;
+  border-radius: 33px;
+  z-index: -1;
+}
+
+.aurora-border > div {
+  background-color: #000000;
+  border-radius: 30px;
+  padding: 20px;
+  opacity: 0.8;
+}
+
+@keyframes aurora-flow {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+@keyframes aurora-pulse {
+  0% { box-shadow: 0 0 3px 1px rgba(139,92,246,0.6); }
+  50% { box-shadow: 0 0 12px 4px rgba(21, 228, 239, 0.3); }
+  100% { box-shadow: 0 0 3px 1px rgba(139,92,246,0.6); }
+}
+
+.aurora-border-pulse:focus,
+.aurora-border-pulse:focus-visible {
+  outline: none;
+  animation: aurora-pulse 2s ease-out infinite;
+  border-radius: 33px;
+  border: 2px solid #8b5cf6;
+}
+
+:root {
+  line-height: 1.5;
+  font-weight: 300;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #0d0d0d;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+a:hover {
+  color: #535bf2;
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+  font-weight: 300 !important;
+}
+h1 strong{font-weight:700 !important;}
+button {
+  border-radius: 8px;
+  border: 6px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 700;
+  font-family: inherit;
+  background: linear-gradient(135deg, #236597, #4a3186);
+  cursor: pointer;
+  transition: border-color 0.25s;
+  margin:10px
+}
+button:hover {
+  background: linear-gradient(135deg, #036f7b, #113048) !important;
+  background-size: 300% 300%;
+  color:#ffffff;
+  animation: aurora-butt 3s infinite linear;
+  border:solid 6px #ffffff !important;
+}
+  
+@keyframes aurora-butt {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Fast aurora animation for button hover */
+@keyframes aurora-fast {
+    0% { background-position: 0% 50%; }
+    25% { background-position: 100% 50%; }
+    50% { background-position: 0% 50%; }
+    75% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Button hover effects */
+.aurora-border:hover::before {
+    animation: aurora-fast 9s infinite linear !important;
+}
+
+button:hover .aurora-border::before {
+    animation: aurora-fast 9s infinite linear !important;
+}
+
+/* Enhanced button hover effects */
+button:hover {
+    transform: scale(1.1);
+    color: white !important;
+}
+
+button:hover a {
+    color: white !important;
+    text-decoration: none;
+}
+
+/* Ensure text stays white during hover */
+button:hover span {
+    color: white !important;
+}
+
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+input.aurora-border-pulse{
+  background:#fff !important;
+  color:#333 !important;
+  padding:13px 20px !important;}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+}
+
+@layer utilities { 
+  /* Aurora gradient animation */
+  .aurora-gradient { 
+    background: linear-gradient(135deg, #8b5cf6, #3CAAFF, #4ade80, #8b5cf6);
+    background-size: 300% 300%;
+    animation: aurora-flow 12s infinite linear;
+  }
+  
+  @keyframes aurora-flow {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+  
+  /* Custom text weights for Jost font */
+  .font-light { font-weight: 300; }
+  .font-bold { font-weight: 700; }
+  
+  /* Custom rounded corner utilities */
+  .rounded-input { border-radius: 18px; }
+  
+  /* Focus styles */
+  .focus-aurora:focus-visible {
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(60,170,255,0.6);
+  }
+}
+
+.flex .flex button{background:none !important;}
+hr{border-top:1px solid #333;margin:20px 0px;}
+*{line-height:1;}
+p {
+  display: block;
+  margin-block-start: 0;
+  margin-block-end: 0;
+  margin-inline-start: 0;
+  margin-inline-end: 0;
+  unicode-bidi: isolate;
+}
+.padmeh{margin:15px !important;}
+input, select{padding:13px 20px !important;}
+
+/* Cross-browser compatibility and visual enhancements */
+* {
+  box-sizing: border-box;
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Better focus styles */
+button:focus-visible,
+a:focus-visible {
+  outline: 2px solid #8b5cf6;
+  outline-offset: 2px;
+}
+
+/* Prevent horizontal scroll on mobile */
+body {
+  overflow-x: hidden;
+}
+
+/* Better button animations */
+button {
+  -webkit-tap-highlight-color: transparent;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Ensure images are responsive */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Better text selection */
+::selection {
+  background-color: rgba(139, 92, 246, 0.3);
+  color: white;
+}
+
+::-moz-selection {
+  background-color: rgba(139, 92, 246, 0.3);
+  color: white;
+}
+
+/* Loading animation for buttons */
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.7;
+  }
+}
+
+.loading {
+  animation: pulse 1.5s ease-in-out infinite;
+}
+
+/* Gradient text support */
+.gradient-text {
+  background: linear-gradient(135deg, #8b5cf6, #3caaFF, #4ade80);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+}
+
+/* Performance optimizations */
+.floating-emoji {
+  will-change: transform;
+  transform: translateZ(0);
+}
+
+/* Better backdrop blur support */
+@supports (backdrop-filter: blur(10px)) {
+  .backdrop-blur-md {
+    backdrop-filter: blur(10px);
+  }
+}
+
+/* Fallback for browsers that don't support backdrop-filter */
+@supports not (backdrop-filter: blur(10px)) {
+  .backdrop-blur-md {
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+}
+
+/* Scroll animations - CSS only approach */
+@keyframes slideInFromLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInFromRight {
+  from {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInFromTop {
+  from {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInFromBottom {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* CSS Scroll-based animations using intersection observer API */
+@supports (animation-timeline: scroll()) {
+  .scroll-animate {
+    animation-timeline: scroll();
+    animation-range: entry 0% cover 50%;
+  }
+}
+
+/* Initial states for all animated elements */
+.slide-in-left,
+.slide-in-right,
+.slide-in-top,
+.slide-in-bottom,
+.fade-in,
+.scale-in {
+  opacity: 0;
+  will-change: transform, opacity;
+}
+
+/* Specific starting positions */
+.slide-in-left {
+  transform: translateX(-120px);
+}
+
+.slide-in-right {
+  transform: translateX(120px);
+}
+
+.slide-in-top {
+  transform: translateY(-80px);
+}
+
+.slide-in-bottom {
+  transform: translateY(80px);
+}
+
+.scale-in {
+  transform: scale(0.7);
+}
+
+/* Fallback animations for browsers without scroll() support */
+.scroll-animate {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+/* Animation classes that trigger on scroll - using transitions for better performance */
+.scroll-visible .slide-in-left,
+.scroll-visible .slide-in-right,
+.scroll-visible .slide-in-top,
+.scroll-visible .slide-in-bottom,
+.scroll-visible .fade-in,
+.scroll-visible .scale-in {
+  opacity: 1;
+  transform: translateX(0) translateY(0) scale(1);
+  transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+/* Specific transition durations for different animation types */
+.scroll-visible .fade-in {
+  transition: opacity 1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.scroll-visible .scale-in {
+  transition: all 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+/* Stagger delay classes */
+.animation-delay-100 {
+  animation-delay: 0.1s;
+  transition-delay: 0.1s;
+}
+.animation-delay-200 {
+  animation-delay: 0.2s;
+  transition-delay: 0.2s;
+}
+.animation-delay-300 {
+  animation-delay: 0.3s;
+  transition-delay: 0.3s;
+}
+.animation-delay-400 {
+  animation-delay: 0.4s;
+  transition-delay: 0.4s;
+}
+.animation-delay-500 {
+  animation-delay: 0.5s;
+  transition-delay: 0.5s;
+}
+
