@@ -4,9 +4,9 @@
   "description": "A modern, responsive feature website for GrocerySync - the app that makes sharing grocery lists with family and friends effortless.",
   "main": "FloatingEmojis.js",
   "scripts": {
-    "build:css": "npx tailwindcss -i ./src/input.css -o ./dist/output.css --watch=false",
+    "build:css": "./node_modules/.bin/tailwindcss -i ./src/input.css -o ./dist/output.css --watch=false",
     "build": "npm run build:css",
-    "dev": "npx tailwindcss -i ./src/input.css -o ./dist/output.css --watch",
+    "dev": "./node_modules/.bin/tailwindcss -i ./src/input.css -o ./dist/output.css --watch",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {

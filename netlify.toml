@@ -1,6 +1,6 @@
 [build]
   publish = "."
-  command = "echo 'No build step required - using Tailwind CDN'"
+  command = "echo 'No build step required - using direct CSS approach'"
 
 [[redirects]]
   from = "/*"

@@ -148,91 +148,12 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 
-    <!-- Tailwind CSS with Custom Configuration -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        // Debug: Check if Tailwind is loaded
-        console.log('Tailwind global object:', typeof tailwind);
 
-        // Configure Tailwind immediately after it loads
-        if (typeof tailwind !== 'undefined') {
-            tailwind.config = {
-                darkMode: "class",
-                theme: {
-                    extend: {
-                        fontFamily: {
-                            sans: ['Jost', 'sans-serif'],
-                        },
-                        colors: {
-                            purple: "#8b5cf6",
-                            background: "#0d0d0d",
-                            black: "#000000"
-                        },
-                        borderRadius: {
-                            aurora: "33px"
-                        },
-                        backgroundImage: {
-                            'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-                        }
-                    }
-                },
-                plugins: []
-            };
-            console.log('✅ Tailwind config applied:', tailwind.config);
-        } else {
-            console.error('❌ Tailwind not found, trying again in 100ms...');
-            setTimeout(() => {
-                if (typeof tailwind !== 'undefined') {
-                    tailwind.config = {
-                        darkMode: "class",
-                        theme: {
-                            extend: {
-                                fontFamily: {
-                                    sans: ['Jost', 'sans-serif'],
-                                },
-                                colors: {
-                                    purple: "#8b5cf6",
-                                    background: "#0d0d0d",
-                                    black: "#000000"
-                                },
-                                borderRadius: {
-                                    aurora: "33px"
-                                },
-                                backgroundImage: {
-                                    'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-                                }
-                            }
-                        },
-                        plugins: []
-                    };
-                    console.log('✅ Tailwind config applied (delayed):', tailwind.config);
-                } else {
-                    console.error('❌ Tailwind still not found after delay');
-                }
-            }, 100);
-        }
-    </script>
 
     <!-- Custom CSS -->
     <link rel="stylesheet" href="./index.css">
 
-    <!-- Debug: Visual indicator for custom config -->
-    <style>
-        .debug-indicator {
-            position: fixed;
-            bottom: 10px;
-            right: 10px;
-            padding: 5px 10px;
-            background: rgba(0,0,0,0.8);
-            color: white;
-            font-size: 12px;
-            border-radius: 5px;
-            z-index: 9999;
-            font-family: monospace;
-        }
-        .debug-success { background: rgba(34, 197, 94, 0.9); }
-        .debug-error { background: rgba(239, 68, 68, 0.9); }
-    </style>
+
 
     <!-- GSAP for animations -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
@@ -604,46 +525,8 @@
 
 
 
-    <!-- Debug indicator for Tailwind config status -->
-    <div id="tailwind-debug" class="debug-indicator">
-        <div id="debug-status">Loading Tailwind...</div>
-        <div id="debug-custom">Custom config: <span id="custom-status">Checking...</span></div>
-    </div>
-
     <!-- Scripts -->
     <script src="./FloatingEmojis.js"></script>
     <script src="./script.js"></script>
-
-    <script>
-        // Update debug indicator
-        setTimeout(() => {
-            const debugEl = document.getElementById('debug-status');
-            const customEl = document.getElementById('custom-status');
-
-            if (typeof tailwind !== 'undefined' && tailwind.config) {
-                debugEl.textContent = '✅ Tailwind OK';
-                debugEl.parentElement.classList.add('debug-success');
-
-                // Check if custom config is loaded
-                if (tailwind.config.theme?.extend?.colors?.purple === '#8b5cf6') {
-                    customEl.textContent = '✅ Working';
-                    customEl.style.color = '#10b981';
-                } else {
-                    customEl.textContent = '❌ Failed';
-                    customEl.style.color = '#ef4444';
-                }
-            } else {
-                debugEl.textContent = '❌ Tailwind Failed';
-                debugEl.parentElement.classList.add('debug-error');
-                customEl.textContent = '❌ N/A';
-                customEl.style.color = '#ef4444';
-            }
-
-            // Hide debug after 10 seconds
-            setTimeout(() => {
-                document.getElementById('tailwind-debug').style.display = 'none';
-            }, 10000);
-        }, 500);
-    </script>
 </body>
 </html>
