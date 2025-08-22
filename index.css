@@ -8,6 +8,16 @@
   .star-btn {
     @apply p-0 m-0 bg-transparent border-0 shadow-none;
   }
+
+  /* Fallback custom utilities in case Tailwind config doesn't load */
+  .bg-purple-400 { background-color: #8b5cf6 !important; }
+  .bg-purple-900 { background-color: #581c87 !important; }
+  .text-purple-400 { color: #8b5cf6 !important; }
+  .text-purple-300 { color: #a855f7 !important; }
+  .border-purple-500 { border-color: #8b5cf6 !important; }
+  .rounded-aurora { border-radius: 33px !important; }
+  .bg-black { background-color: #000000 !important; }
+  .text-white { color: #ffffff !important; }
 }
 @tailwind components;
 @tailwind utilities;
