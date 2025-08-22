@@ -214,7 +214,7 @@ html, body {
   }
 
   h2 {
-    font-size: 2rem;
+    font-size: 2.5rem;
     font-weight:300 !important;
   }
 
@@ -342,7 +342,8 @@ button {
   background: linear-gradient(135deg, #236597, #4a3186);
   cursor: pointer;
   transition: border-color 0.25s;
-  margin:10px
+  margin:10px;
+  color:#ffffff !important;
 }
 button:hover {
   background: linear-gradient(135deg, #036f7b, #113048) !important;
@@ -351,6 +352,7 @@ button:hover {
   animation: aurora-butt 3s infinite linear;
   border:solid 6px #ffffff !important;
 }
+button a{color:#ffffff !important;}
   
 @keyframes aurora-butt {
     0% { background-position: 0% 50%; }
