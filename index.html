@@ -157,6 +157,14 @@
 
     <!-- GSAP for animations -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-JWTHZR28CR"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-JWTHZR28CR');
+    </script>
 </head>
 <body class="font-sans">
     <!-- Floating Emojis Background -->
@@ -170,10 +178,10 @@
                     <span class="text-xl sm:text-2xl text-white">Grocery<strong class="font-bold">Sync</strong></span>
                 </div>
                 <div class="hidden md:flex items-center space-x-8">
-                    <a href="#features" class="text-white hover:text-purple-400 transition-colors">Features</a>
-                    <a href="#how-it-works" class="text-white hover:text-purple-400 transition-colors">How It Works</a>
-                    <a href="#grocery-list-app-guide" class="text-white hover:text-purple-400 transition-colors">About</a>
-                    <a href="#webapp" class="text-white hover:text-purple-400 transition-colors">Web App</a>
+                    <a href="#features" class="text-white hover:text-purple-400 transition-colors dude">Features</a>
+                    <a href="#how-it-works" class="text-white hover:text-purple-400 transition-colors dude">How It Works</a>
+                    <a href="#grocery-list-app-guide" class="text-white hover:text-purple-400 transition-colors dude">About</a>
+                    <a href="#webapp" class="text-white hover:text-purple-400 transition-colors dude">Web App</a>
                 </div>
                 <!-- Mobile menu button -->
                 <button id="mobile-menu-btn" class="md:hidden text-white p-2 focus:outline-none">
@@ -294,7 +302,7 @@
     </section>
 
     <!-- SEO Content Section - Targeting Common Grocery List App Searches -->
-    <section id="grocery-list-app-guide" class="py-12 sm:py-20 px-4 sm:px-6 bg-gradient-to-b from-black/50 to-gray-900/50">
+    <section id="grocery-list-app-guide" class="py-12 sm:py-20 px-4 sm:px-6 bg-gradient-to-b from-black/50 to-gray-900/50" style="padding:33px;">
         <div class="max-w-7xl mx-auto">
             <h2 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-white text-center mb-8 sm:mb-16">
                 About <strong>Grocery List Apps</strong>
@@ -303,7 +311,7 @@
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 mb-12 sm:mb-16">
                 <!-- Left Column - Main Content -->
                 <div class="space-y-6 sm:space-y-8">
-                    <div class="aurora-border p-6 sm:p-8" style="background:#111;border-radius:33px !important;">
+                    <div class="aurora-border p-6 sm:p-8" style="background:#000 !important;border-radius:33px !important;">
                         <h3 class="text-xl sm:text-2xl lg:text-3xl font-bold text-white mb-4 sm:mb-6">What to Look for in a Grocery List App</h3>
                         <p class="text-white text-sm sm:text-base lg:text-lg mb-4">
                             Looking for the best grocery list app? Here are the essential features that separate great apps from good ones:
@@ -317,7 +325,7 @@
                         </ul>
                     </div>
 
-                    <div class="aurora-border p-6 sm:p-8" style="background:#111;border-radius:33px !important;">
+                    <div class="aurora-border p-6 sm:p-8" style="background:#000 !important;border-radius:33px !important;">
                         <h3 class="text-xl sm:text-2xl lg:text-3xl font-bold text-white mb-4 sm:mb-6">Popular Grocery List App Features</h3>
                         <p class="text-white text-sm sm:text-base lg:text-lg mb-4">
                             The top grocery shopping apps should include:
@@ -335,7 +343,7 @@
 
                 <!-- Right Column - Comparison & FAQ -->
                 <div class="space-y-6 sm:space-y-8">
-                    <div class="aurora-border p-6 sm:p-8" style="background:#111;border-radius:33px !important;">
+                    <div class="aurora-border p-6 sm:p-8" style="background:#000 !important;border-radius:33px !important;">
                         <h3 class="text-xl sm:text-2xl lg:text-3xl font-bold text-white mb-4 sm:mb-6">How GrocerySync Stacks Up</h3>
                         <p class="text-white text-sm sm:text-base lg:text-lg mb-4">
                             <strong>What makes GrocerySync different:</strong>
@@ -365,13 +373,9 @@
                     </div>
 
                     <!-- FAQ Section with Structured Data -->
-                    <div class="aurora-border p-6 sm:p-8" style="background:#111;border-radius:33px !important;">
+                    <div class="aurora-border p-6 sm:p-8" style="background:#000 !important;border-radius:33px !important;">
                         <h3 class="text-xl sm:text-2xl lg:text-3xl font-bold text-white mb-4 sm:mb-6">❓ Frequently Asked Questions</h3>
                         <div class="space-y-4">
-                            <div>
-                                <h4 class="text-white font-bold text-sm sm:text-base mb-2">What's the best free grocery list app?</h4>
-                                <p class="text-gray-300 text-sm sm:text-base">GrocerySync is widely regarded as the <a href="#features" class="text-purple-400 hover:text-purple-300">best free grocery list app</a> for families, offering unlimited lists, smart roles, and real-time collaboration without any cost.</p>
-                            </div>
                             <div>
                                 <h4 class="text-white font-bold text-sm sm:text-base mb-2">Can I share grocery lists with family?</h4>
                                 <p class="text-gray-300 text-sm sm:text-base">Yes! GrocerySync is designed specifically for <a href="#how-it-works" class="text-purple-400 hover:text-purple-300">family grocery list sharing</a>, with different roles for shoppers and contributors.</p>
@@ -394,9 +398,9 @@
                 What is a <span class="font-bold">Web App</span>?
             </h2>
 
-            <div class="grid md:grid-cols-2 gap-8 sm:gap-12 mb-12 sm:mb-16">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 mb-12 sm:mb-16">
                 <!-- Web App Explanation -->
-                <div class="aurora-border p-4 sm:p-6 lg:p-8" style="background:#111;border-radius:33px !important;">
+                <div class="aurora-border p-4 sm:p-6 lg:p-8" style="background:#000 !important;border-radius:33px !important;">
                     <h3 class="text-lg sm:text-xl lg:text-2xl font-bold text-white mb-4 sm:mb-6">🌐 Cut out the app stores!</h3>
                     <p class="text-white text-sm sm:text-base lg:text-lg mb-4">
                         GrocerySync is a web app that runs directly in your browser. Unlike traditional apps that need to be downloaded from app stores, you can access it instantly from any device with an internet connection.
@@ -416,48 +420,43 @@
                 </div>
 
                 <!-- Browser Compatibility -->
-                <div class="aurora-border p-4 sm:p-6 lg:p-8" style="background:#111;border-radius:33px !important;">
+                <div class="aurora-border p-4 sm:p-6 lg:p-8" style="background:#000 !important;border-radius:33px !important;">
                     <h3 class="text-lg sm:text-xl lg:text-2xl font-bold text-white mb-4 sm:mb-6">🖥️ Compatible Browsers</h3>
                     <p class="text-white text-sm sm:text-base lg:text-lg mb-4">
                         GrocerySync works seamlessly across all major web browsers. Whether you're on desktop, tablet, or mobile, you can access your grocery lists from anywhere.
                     </p>
                     
-                    <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-2 gap-4 aurora" style="background:#111111 !important;border-radius:33px !important;">
-                        <div class="text-center">
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 mb-12 sm:mb-16">
+                        <div class="text-center" style="background:#101010 !important;border-radius: 22px;padding:10px;">
                             <div class="text-2xl sm:text-3xl mb-2">🌐</div>
                             <p class="text-white text-xs sm:text-sm">Chrome</p>
                         </div>
-                        <div class="text-center">
+                        <div class="text-center" style="background:#101010 !important;border-radius: 22px;padding:10px;">
                             <div class="text-2xl sm:text-3xl mb-2">🦊</div>
                             <p class="text-white text-xs sm:text-sm">Firefox</p>
                         </div>
-                        <div class="text-center">
+                        <div class="text-center" style="background:#101010 !important;border-radius: 22px;padding:10px;">
                             <div class="text-2xl sm:text-3xl mb-2">🍎</div>
                             <p class="text-white text-xs sm:text-sm">Safari</p>
                         </div>
-                        <div class="text-center">
+                        <div class="text-center" style="background:#101010 !important;border-radius: 22px;padding:10px;">
                             <div class="text-2xl sm:text-3xl mb-2">🪟</div>
                             <p class="text-white text-xs sm:text-sm">Edge</p>
                         </div>
-                        <div class="text-center">
+                        <div class="text-center" style="background:#101010 !important;border-radius: 22px;padding:10px;">
                             <div class="text-2xl sm:text-3xl mb-2">📱</div>
                             <p class="text-white text-xs sm:text-sm">Mobile Chrome</p>
                         </div>
-                        <div class="text-center">
+                        <div class="text-center" style="background:#101010 !important;border-radius: 22px;padding:10px;">
                             <div class="text-2xl sm:text-3xl mb-2">📱</div>
                             <p class="text-white text-xs sm:text-sm">Safari Mobile</p>
                         </div>
                     </div>
-                    <div class="mt-6 p-4" style="background-color: rgba(34, 34, 34, 0.8);">
+                    <div class="mt-6 p-4" style="font-size:25px !important;background-color: rgba(34, 34, 34, 0.2);text-align:center !important;">
                         <h4 class="text-lg font-bold text-white mb-2">🔐 Easy Sign-In Options</h4>
-                        <div class="flex flex-col gap-2 text-sm text-white">
-                            <div class="flex items-center gap-2">
-                                <span class="text-blue-400"><img src="./google.png" style="width:20px;height:20px;" alt="Google Sign-In"></span>
-                                <span>Sign in with Google Account</span>
-                            </div>
-                            <div class="flex items-center gap-2">
-                                <span class="text-purple-400">🪄</span>
-                                <span>Magic Link via Email</span>
+                        <div class="flex flex-col gap-2 text-sm text-white"  style="text-align:center !important;margin:0 auto;width:100%;">
+                            <div class="flex items-center gap-2" style="text-align:center !important;margin:0 auto;">
+                                <span class="text-blue-400"><img src="./google.png" style="width:20px;height:20px;" alt="Google Sign-In"></span> <span>Sign in with Google Account</span>&nbsp;&nbsp;&nbsp; | &nbsp;&nbsp;&nbsp;<span class="text-purple-400">🪄</span> <span>Magic Link via Email</span>
                             </div>
                         </div>
                     </div>
@@ -465,11 +464,11 @@
             </div>
 
             <!-- Call to Action -->
-            <div class="text-center">
+            <div class="text-center" style="margin-top:100px;text-align:center !important;margin:55px">
                 <h3 class="text-xl sm:text-2xl md:text-3xl text-white mb-6 sm:mb-8">
                     Ready to <span class="font-bold">Get Started</span>?
                 </h3>
-                <p class="text-lg sm:text-xl text-white mb-8 sm:mb-12 max-w-2xl mx-auto px-4">
+                <p class="text-lg sm:text-xl text-white mb-8 sm:mb-12 px-4 text-center" style="text-align:center !important;">
                     Simply open GrocerySync in your browser and start creating shared grocery lists with your family and friends today.
                 </p>
                 <div class="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center items-center max-w-md sm:max-w-none mx-auto">
