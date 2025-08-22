@@ -151,28 +151,37 @@
     <!-- Tailwind CSS with Custom Configuration -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
-        tailwind.config = {
-            darkMode: "class",
-            theme: {
-                extend: {
-                    fontFamily: {
-                        sans: ['Jost', 'sans-serif'],
+        // Configure Tailwind before it processes the page
+        window.addEventListener('load', function() {
+            if (window.tailwind) {
+                window.tailwind.config = {
+                    darkMode: "class",
+                    theme: {
+                        extend: {
+                            fontFamily: {
+                                sans: ['Jost', 'sans-serif'],
+                            },
+                            colors: {
+                                purple: "#8b5cf6",
+                                background: "#0d0d0d",
+                                black: "#000000"
+                            },
+                            borderRadius: {
+                                aurora: "33px"
+                            },
+                            backgroundImage: {
+                                'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
+                            }
+                        }
                     },
-                    colors: {
-                        purple: "#8b5cf6",
-                        background: "#0d0d0d",
-                        black: "#000000"
-                    },
-                    borderRadius: {
-                        aurora: "33px"
-                    },
-                    backgroundImage: {
-                        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-                    }
-                }
-            },
-            plugins: []
-        };
+                    plugins: []
+                };
+                // Force Tailwind to reprocess with new config
+                document.querySelectorAll('[class*="bg-"], [class*="text-"], [class*="border-"], [class*="rounded-"]').forEach(el => {
+                    el.style.display = el.style.display; // Force reflow
+                });
+            }
+        });
     </script>
 
     <!-- Custom CSS -->
