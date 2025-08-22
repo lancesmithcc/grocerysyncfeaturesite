@@ -148,8 +148,32 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 
-    <!-- Tailwind CSS -->
+    <!-- Tailwind CSS with Custom Configuration -->
     <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Jost', 'sans-serif'],
+                    },
+                    colors: {
+                        purple: "#8b5cf6",
+                        background: "#0d0d0d",
+                        black: "#000000"
+                    },
+                    borderRadius: {
+                        aurora: "33px"
+                    },
+                    backgroundImage: {
+                        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
+                    }
+                }
+            },
+            plugins: []
+        };
+    </script>
 
     <!-- Custom CSS -->
     <link rel="stylesheet" href="./index.css">
